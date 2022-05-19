@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+:root {
+  --color-gold: #bdae82;
+  --color-black: #000;
+  --color-white: #fff;
+  --font1: 60px;
+  --font2: 40px;
+}
+
+body {
+  margin: 0 auto;
+  background: #3cad6b;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+/*----------------------------------------------------------------*/
+
+.container {
+  width: 800px;
+  margin: auto;
+  background: #494949;
+  border-radius: 16px;
+  padding: 1.25em;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__images {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  background: #000;
+  overflow: hidden;
+}
+
+.main__image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.main__image1 {
+  background-image: url(./assets/images/mem1.jpg);
+}
+
+.main__image2 {
+  background-image: url(./assets/images/mem2.png);
+}
+
+.main__image3 {
+  background-image: url(./assets/images/mem3.jpg);
+}
+
+.main__image4 {
+  background-image: url(./assets/images/mem4.jpeg);
+}
+
+.main__text-btn {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__textBlock {
+  width: 70%;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10px 0 0;
+  overflow: hidden;
+}
+
+.main__text {
+  font-size: 1.125em;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.text {
+  width: 100%;
+  padding: 4px 0;
+  transition: 0.5s;
+}
+
+.main__buttons {
+  width: 120px;
+  display: flex;
+}
+
+.main__buttonBlock {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.main__buttonBlock:hover .main__button {
+  border: 2px solid rgb(156, 156, 156);
+}
+
+.main__buttonBlock:active .main__button {
+  border: 2px solid rgb(156, 156, 156);
+  transform: scale(0.9);
+}
+
+.activeButton:hover .main__button {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.activeButton:active .main__button {
+  border: 2px solid rgb(255, 255, 255);
+  transform: scale(1);
+}
+
+.inp {
+  display: none;
+}
+
+.main__button {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  border-radius: 50px;
+  background: rgb(184, 184, 184);
+}
+
+.activeButton .main__button {
+  background: rgb(255, 255, 255);
+}
+
+.main__label {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__label:hover .main__button {
+  opacity: 0.5;
+}
+
+.main__label:active .main__button {
+  transform: scale(0.8);
+}
+
+.main__button:checked  {
+  transform: scale(1.5);
+}
+
+.main__button1:checked ~ .main__text-btn > .main__buttons > .main__label1 > .main__button ,
+.main__button2:checked ~ .main__text-btn > .main__buttons > .main__label2 > .main__button ,
+.main__button3:checked ~ .main__text-btn > .main__buttons > .main__label3 > .main__button ,
+.main__button4:checked ~ .main__text-btn > .main__buttons > .main__label4 > .main__button {
+  background: #478ace;
+  transform: scale(1.4);
+}
+
+.main__button1:checked ~ .main__images > .main__image1 {
+  margin-top: 0px;
+}
+
+.main__button2:checked ~ .main__images > .main__image1 {
+  margin-top: -400px;
+}
+
+.main__button3:checked ~ .main__images > .main__image1 {
+  margin-top: -800px;
+}
+
+.main__button4:checked ~ .main__images > .main__image1 {
+  margin-top: -1200px;
+}
+
+
+
+.main__button1:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: 0px;
+}
+
+.main__button2:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: -30px;
+}
+
+.main__button3:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: -60px;
+}
+
+.main__button4:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: -90px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 820px) {
+  .container {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    font-size: 12px;
+  }
+
+  .text {
+    width: 100%;
+    padding: 7px 0;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 460px;
+    margin: 0 10px;
+  }
+
+  .main__images {
+    height: 280px;
+  }
+
+  .main__text-btn {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .main__textBlock {
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .main__buttons {
+    margin: 16px 0;
+  }
+
+  .text {
+    width: 100%;
+    padding: 7px 0;
+    transition: 0.5s;
+  }
+
+
+  .main__button1:checked ~ .main__images > .main__image1 {
+    margin-top: 0px;
+  }
+  
+  .main__button2:checked ~ .main__images > .main__image1 {
+    margin-top: -280px;
+  }
+  
+  .main__button3:checked ~ .main__images > .main__image1 {
+    margin-top: -560px;
+  }
+  
+  .main__button4:checked ~ .main__images > .main__image1 {
+    margin-top: -840px;
+  }
+}
