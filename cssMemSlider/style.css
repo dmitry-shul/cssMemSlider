@@ -109,15 +109,24 @@ textarea {
 
 .main__textBlock {
   width: 70%;
+  height: 30px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0 10px 0 0;
+  overflow: hidden;
 }
 
 .main__text {
   font-size: 1.125em;
   color: #fff;
   transition: 0.2s;
+}
+
+.text {
+  width: 100%;
+  padding: 4px 0;
+  transition: 0.5s;
 }
 
 .main__buttons {
@@ -144,7 +153,7 @@ textarea {
 }
 
 .activeButton:hover .main__button {
-  border: 2px solid rgb(255, 255, 255)
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .activeButton:active .main__button {
@@ -152,31 +161,114 @@ textarea {
   transform: scale(1);
 }
 
+.inp {
+  display: none;
+}
+
 .main__button {
   width: 14px;
   height: 14px;
+  cursor: pointer;
   border-radius: 50px;
-  border: 2px solid rgb(255, 255, 255);
+  background: rgb(184, 184, 184);
 }
 
 .activeButton .main__button {
   background: rgb(255, 255, 255);
 }
 
+.main__label {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__label:hover .main__button {
+  opacity: 0.5;
+}
+
+.main__label:active .main__button {
+  transform: scale(0.8);
+}
+
+.main__button:checked  {
+  transform: scale(1.5);
+}
+
+.main__button1:checked ~ .main__text-btn > .main__buttons > .main__label1 > .main__button ,
+.main__button2:checked ~ .main__text-btn > .main__buttons > .main__label2 > .main__button ,
+.main__button3:checked ~ .main__text-btn > .main__buttons > .main__label3 > .main__button ,
+.main__button4:checked ~ .main__text-btn > .main__buttons > .main__label4 > .main__button {
+  background: #478ace;
+  transform: scale(1.4);
+}
+
+.main__button1:checked ~ .main__images > .main__image1 {
+  margin-top: 0px;
+}
+
+.main__button2:checked ~ .main__images > .main__image1 {
+  margin-top: -400px;
+}
+
+.main__button3:checked ~ .main__images > .main__image1 {
+  margin-top: -800px;
+}
+
+.main__button4:checked ~ .main__images > .main__image1 {
+  margin-top: -1200px;
+}
+
+
+
+.main__button1:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: 0px;
+}
+
+.main__button2:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: -30px;
+}
+
+.main__button3:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: -60px;
+}
+
+.main__button4:checked ~ .main__text-btn > .main__textBlock > .text1 {
+  margin-top: -90px;
+}
+
+
+
+
+
 
 @media screen and (max-width: 820px) {
-	.container {
+  .container {
     margin: 0 10px;
   }
 }
 
+@media screen and (max-width: 550px) {
+  body {
+    font-size: 12px;
+  }
+
+  .text {
+    width: 100%;
+    padding: 7px 0;
+    transition: 0.5s;
+  }
+}
 
 @media screen and (max-width: 480px) {
   body {
     font-size: 12px;
   }
 
-	.container {
+  .container {
     width: 460px;
     margin: 0 10px;
   }
@@ -199,5 +291,28 @@ textarea {
 
   .main__buttons {
     margin: 16px 0;
+  }
+
+  .text {
+    width: 100%;
+    padding: 7px 0;
+    transition: 0.5s;
+  }
+
+
+  .main__button1:checked ~ .main__images > .main__image1 {
+    margin-top: 0px;
+  }
+  
+  .main__button2:checked ~ .main__images > .main__image1 {
+    margin-top: -280px;
+  }
+  
+  .main__button3:checked ~ .main__images > .main__image1 {
+    margin-top: -560px;
+  }
+  
+  .main__button4:checked ~ .main__images > .main__image1 {
+    margin-top: -840px;
   }
 }

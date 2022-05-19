@@ -14,6 +14,11 @@
   <body>
     <div class="container">
       <div class="main">
+        <input checked type="radio" name="main__button" class="inp main__button1" id="main__button1"  />
+        <input type="radio" name="main__button" class="inp main__button2" id="main__button2"  />
+        <input type="radio" name="main__button" class="inp main__button3" id="main__button3"  />
+        <input type="radio" name="main__button" class="inp main__button4" id="main__button4"  />
+
         <div class="main__images">
           <div class="main__image main__image1"></div>
           <div class="main__image main__image2"></div>
@@ -23,30 +28,33 @@
 
         <div class="main__text-btn">
           <div class="main__textBlock">
-            <span class="main__text">То, что вы увидите, называется МЕМЫ</span>
+            <div class="text text1"><span class="main__text main__text1">То, что вы увидите, называется МЕМЫ</span></div>
+            <div class="text text2"><span class="main__text">ты чего наделал....</span></div>
+            <div class="text text3"><span class="main__text">Где живут мемы?</span></div>
+            <div class="text text4"><span class="main__text">Жаль</span></div>
           </div>
-
+          
           <div class="main__buttons">
-            <div class="main__buttonBlock activeButton">
+                        
+            <label for="main__button1" class="main__label main__label1">
               <div class="main__button"></div>
-            </div>
-
-            <div class="main__buttonBlock">
-              <div class="main__button"></div>
-            </div>
-
-            <div class="main__buttonBlock">
-              <div class="main__button"></div>
-            </div>
-
-            <div class="main__buttonBlock">
-              <div class="main__button"></div>
-            </div>
+            </label>
+            
+            <label for="main__button2" class="main__label main__label2">
+                <div class="main__button"></div>
+            </label>
+            
+            <label for="main__button3" class="main__label main__label3">
+                <div class="main__button"></div>
+            </label>
+            
+            <label for="main__button4" class="main__label main__label4">
+                <div class="main__button"></div>
+            </label>
+            
           </div>
         </div>
       </div>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>
